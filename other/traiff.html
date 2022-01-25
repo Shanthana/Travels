@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Traiff</title>
+    <link rel="stylesheet" href="css/styletr.css">
+</head>
+<body>
+   
+    <div class="Account-type">
+        <div class="icon">
+            <h2 class="logo">KATHIRESAN TRAVELS</h2> 
+       </div>
+            
+        <div id="btn"></div>
+        <div class="content1">
+                <div>
+                    <h2>Xylo</h2><br>
+                    <p class="car">
+                        *Toll-Tax:Excluded<br>
+                        *State-Tax:Excluded<br><br>
+                        Seat : 7 + 1(Driver)<br>   
+                        Rate/km : 
+                    </p><br></br>
+                    <a href="login.html"><button type="submit" class="submit-btn">Submit</button></a>
+                </div>
+           
+        </div>
+        <div class="content2">
+            
+                <div >
+                    <h2>Swift</h2><br>
+                    <p class="car">
+                        *Toll-Tax:Excluded<br>
+                        *State-Tax:Excluded<br><br>
+                        Seat : 4 + 1(Driver)   <br>
+                        Rate/km :     
+                    </p><br></br>
+                    <a href="login.html"><button type="submit" class="submit-btn">Submit</button></a>
+                </div>
+           
+        </div>
+        <!--
+        <div class="content3">
+           
+                <div>
+                    <h2>Suv</h2><br>
+                    <p class="car">
+                        *Toll-Tax:Excluded<br>
+                        *State-Tax:Excluded<br>     
+                    </p><br></br>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+           
+        </div>-->    
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyndDvvTDMtURezZwJ--pQ5MA4iNUpPay7knZ5KRk_p6xMuMQNP7EHwH7nAB4Re5wqN/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
